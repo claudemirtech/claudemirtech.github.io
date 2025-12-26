@@ -4,17 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AtomicWeb</title>
+    <link rel="icon" href="img/favicon.ico">
     <!-- Link to Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-100 font-sans text-gray-900">
-    <div class="container mx-auto p-6">
-        <h1 class="text-4xl font-bold text-center text-blue-500">Hello, welcome to AtomicWeb!</h1>
-        <p class="mt-4 text-center">This is my initial page</p>
-        <div class="flex justify-center space-x-4 mt-6">
-            <a class="px-6 py-2 bg-blue-500 text-white rounded-lg" href="https://claudemirtech.github.io/base64">Base64</a>
-            <a class="px-6 py-2 bg-blue-500 text-white rounded-lg" href="https://claudemirtech.github.io/linkme">LinkMe</a>
+<div class="flex min-h-screen">
+    <!-- Menu Lateral Esquerdo - Ocupa toda a tela em mobile -->
+    <div class="w-full md:w-64 bg-blue-900 text-white p-6">
+        <div class="h-full flex flex-col">
+            <!-- Cabeçalho do Menu -->
+            <div class="mb-8 md:mb-12 flex items-center">
+                <img src="img/logo.svg" alt={"Logo"} width="36" height="36" class="mr-2"/>
+                <p class="text-blue-300 text-lg">
+                    AtomicWeb
+                </p>
+            </div>
+
+            <!-- Subtítulo em mobile -->
+            <p class="text-blue-200 mb-8 text-center md:text-left md:hidden text-lg">
+                Selecione uma ferramenta:
+            </p>
+
+            <!-- Botões do Menu -->
+            <div class="flex-1 flex flex-col justify-center space-y-6">
+                <a class="block px-6 py-5 bg-blue-700 hover:bg-blue-600 text-white rounded-xl transition duration-200 shadow-lg"
+                   href="https://atomicweb.com.br/base64">
+                    <div class="flex items-center">
+                        <i class="fas fa-code text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-lg">Base64</h3>
+                            <p class="text-blue-200 text-sm mt-1">Decodificador</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="block px-6 py-5 bg-blue-700 hover:bg-blue-600 text-white rounded-xl transition duration-200 shadow-lg"
+                   href="https://atomicweb.com.br/unicode">
+                    <div class="flex items-center">
+                        <i class="fas fa-font text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-lg">Unicode</h3>
+                            <p class="text-blue-200 text-sm mt-1">Conversor unicode</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="block px-6 py-5 bg-blue-700 hover:bg-blue-600 text-white rounded-xl transition duration-200 shadow-lg"
+                   href="https://atomicweb.com.br/contador">
+                    <div class="flex items-center">
+                        <i class="fas fa-calculator text-2xl mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-lg">Contador</h3>
+                            <p class="text-blue-200 text-sm mt-1">Contador Simples</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Rodapé do Menu -->
+            <div class="mt-8 pt-6 border-t border-blue-700">
+                <p class="text-center text-blue-300 text-sm">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    <span class="md:hidden">Toque em uma ferramenta para acessar</span>
+                    <span class="hidden md:inline">Clique em uma ferramenta para acessar</span>
+                </p>
+            </div>
         </div>
     </div>
+
+    <!-- Conteúdo Principal - Oculto em mobile, visível apenas em desktop -->
+    <div class="hidden md:block flex-1 p-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-500">Hello, welcome to AtomicWeb!</h1>
+            <p class="mt-4 text-center text-lg">For a better place on the web.</p>
+
+            <!-- Área de conteúdo adicional -->
+            <div class="mt-12 max-w-3xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">About AtomicWeb</h2>
+                    <p class="text-gray-700 mb-4">
+                        Welcome to AtomicWeb, your hub for useful web tools and utilities.
+                        Use the navigation menu on the left to access different tools.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Each tool serves a specific purpose and is designed to be simple and efficient.
+                    </p>
+
+                    <!-- Cards de ferramentas -->
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200 hover:shadow-md transition duration-200">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-code text-blue-600 text-xl mr-3"></i>
+                                <h3 class="font-bold text-blue-600">Base64</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">Decode Base64 strings easily.</p>
+                        </div>
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200 hover:shadow-md transition duration-200">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-font text-blue-600 text-xl mr-3"></i>
+                                <h3 class="font-bold text-blue-600">Unicode</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">Convert unicode to string.</p>
+                        </div>
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-200 hover:shadow-md transition duration-200">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-calculator text-blue-600 text-xl mr-3"></i>
+                                <h3 class="font-bold text-blue-600">Contador</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">A simple and effective counter tool.</p>
+                        </div>
+                    </div>
+
+                    <!-- Instruções para desktop -->
+                    <div class="mt-10 p-5 bg-blue-100 rounded-lg border border-blue-300">
+                        <h3 class="font-bold text-blue-700 mb-2 flex items-center">
+                            <i class="fas fa-desktop mr-2"></i> Desktop Mode Active
+                        </h3>
+                        <p class="text-blue-800 text-sm">
+                            On large screens, the menu and content are displayed simultaneously.
+                            On mobile devices, only the menu is shown.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

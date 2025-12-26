@@ -1,1 +1,0 @@
-# claudemirtech.github.io
